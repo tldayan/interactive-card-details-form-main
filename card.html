@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <div class="main_container">
+        <div class="image_container">
+            <img class="background_pc" src="./images/bg-main-desktop.png" alt="">
+            <img class="background_mobile" src="./images/bg-main-mobile.png" alt="">
+            <img class="card_back" src="./images/bg-card-back.png" alt="">
+            <img class="card_front" src="./images/bg-card-front.png" alt="">
+        </div>
+        <div class="bottom_container">
+            <form>
+                <div class="card_details_container">
+                    <div class="container card_name_container">
+                    <label class="card_name" for="name">CARDHOLDER NAME</label>
+                    <input class="card_name_feild" type="text" placeholder="e.g. Jane Appleseed" required>
+                    <p class="name_alert"></p>    
+                    </div>
+                    <div class="container card_number_container">
+                    <label class="card_number" for="name">CARD NUMBER</label>
+                    <input class="card_number_feild" type="text" oninput="formatCreditCardNumber(event)" pattern="\d{4} \d{4} \d{4} \d{4}" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" required>
+                    <p class="number_alert"></p>  
+                    </div>
+                    <div class="container card_values_container">
+                        <div class="card_date_container">
+                            <label class="card_date" for="name">EXP. DATE (MM/YY)</label>
+                            <div class="date_container">
+                                <input class="card_month_feild" type="text" placeholder="MM" >
+                                <input class="card_year_feild" type="text" placeholder="YY" >
+                            </div>
+                            <p class="month_alert"></p> 
+                        </div>  
+                        <div class="card_cvc_container">
+                            <label class="cvc" for="name">CVC</label>
+                            <input class="card_cvc_feild" type="text" placeholder="e.g. 123" required>
+                            <p class="cvc_alert"></p>
+                        </div>
+                    </div>
+                    <button onclick="checkAll(event)" class="confirm_btn" href="" type="submit"><div>Confirm</div></button>
+                </div>
+            </form>
+            <div class="thankyou_container">
+                <img class="tick_logo" src="./images/icon-complete.svg" alt="">
+                <h2>Thank you</h2>
+            </div>
+            <div class="attribution" >Challenge by <a target="_blank" class="frontendmentor" href="https://www.frontendmentor.io/challenges">Frontend Mentor</a>. Coded by <a class="author" href="https://github.com/tldayan">TL Dayan</a></div>
+        </div>
+        
+    </div>
+    <script src="card.js"></script>
+</body>
+</html>
